@@ -21,6 +21,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.2.2",
+    "tailwindcss": "^4.2.2",
     "vue": "beta",
     "vue-router": "^5.0.4"
   },
