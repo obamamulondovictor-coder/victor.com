@@ -3,6 +3,7 @@ import about from '@/pages/about.vue'
 import service from '@/pages/service.vue'
 import contact from '@/pages/contact.vue'
 import Project from '@/pages/project.vue'
+import Home from '@/pages/home.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,11 @@ const router = createRouter({
   path: '/project',
   name:'project',
   component:Project
+ },
+ {
+  path: '/home',
+  name:'home',
+  component:Home
  }
   ],
 })
