@@ -308,14 +308,34 @@ const isDark = inject('isDark');
       </RouterLink>
     </div>
   </div>
-  <div class="service">
+  <div class="service text-center">
     <h1 class="text-center font-black font-bold text-3xl text-green-400">Service's</h1>
-    <p class="dark:text-gray-300 text-gray-600 text-center text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">I offer a range of services to help
+    <p
+      class="dark:text-gray-300 text-gray-600 text-center text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+      I offer a range of services to help
       you build and
       enhance your web presence. Whether you're looking for a stunning website, a responsive design, or ongoing
       maintenance, I've got you covered.</p>
 
-      <strong class="text-center">Some Project I Have Worked On:</strong>
+    <strong class="text-2xl font-sans dark:text-white text-gray-800 block mb-4">Some Project I Have Worked On:</strong>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6 max-w-6xl mx-auto">
+      <div class="personal border-2 border-green-500 dark:border-green-400 rounded-xl hover:shadow-xl hover:shadow-green-500/30 hover:scale-105 transition-all duration-300 p-4 bg-white dark:bg-gray-800">
+        <h3 class="text-lg font-bold dark:text-white text-gray-800 mb-2">Personal Portfolio</h3>
+        <p class="text-sm dark:text-gray-300 text-gray-600">Building my own portfolio website with Vue.js and Tailwind</p>
+      </div>
+      <div class="appec border-2 border-green-500 dark:border-green-400 rounded-xl hover:shadow-xl hover:shadow-green-500/30 hover:scale-105 transition-all duration-300 p-4 bg-white dark:bg-gray-800">
+        <h3 class="text-lg font-bold dark:text-white text-gray-800 mb-2">School Website</h3>
+        <p class="text-sm dark:text-gray-300 text-gray-600">Team project - created a school website</p>
+      </div>
+      <div class="starting_workdone border-2 border-green-500 dark:border-green-400 rounded-xl hover:shadow-xl hover:shadow-green-500/30 hover:scale-105 transition-all duration-300 p-4 bg-white dark:bg-gray-800">
+        <h3 class="text-lg font-bold dark:text-white text-gray-800 mb-2">First Projects</h3>
+        <p class="text-sm dark:text-gray-300 text-gray-600">Started with HTML/CSS basics and simple layouts</p>
+      </div>
+      <div class="where_ border-2 border-green-500 dark:border-green-400 rounded-xl hover:shadow-xl hover:shadow-green-500/30 hover:scale-105 transition-all duration-300 p-4 bg-white dark:bg-gray-800">
+        <h3 class="text-lg font-bold dark:text-white text-gray-800 mb-2">What I Can Do Now</h3>
+        <p class="text-sm dark:text-gray-300 text-gray-600">Full responsive websites, Vue.js apps, dark mode</p>
+      </div>
+    </div>
 
   </div>
 </template>
