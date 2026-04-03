@@ -20,7 +20,7 @@ provide('toggleTheme', toggleTheme);
 <template>
 <!-- my victor porfolio --keep it simple -->
  <div class="min-h-screen transition-colors duration-300 bg-gradient-to-br from-green-50 via-white to-green-100 dark:from-green-950 dark:via-gray-900 dark:to-green-900">
-  <navbar></navbar>
+  <navbar class="fixed top-o left-o w-full p-4 z-50 bg-white/70 backdrop-blur-md shadow-sm"></navbar>
   <RouterView />
  </div>
 </template>

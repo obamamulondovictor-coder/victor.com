@@ -5,7 +5,7 @@ import { RouterLink } from 'vue-router';
 const isDark = inject('isDark');
 </script>
 <template>
-  <div class="min-h-screen flex items-center justify-center px-4 py-12">
+  <div class="min-h-screen flex items-center justify-center px-4 py-12 pt-30">
     <div class="max-w-6xl w-full grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
       
       <!-- Left Side - Standing Picture -->
@@ -15,9 +15,9 @@ const isDark = inject('isDark');
           <div class="absolute inset-0 bg-gradient-to-br from-green-400 via-white to-green-300 dark:from-green-800 dark:via-gray-800 dark:to-green-900 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-all duration-500"></div>
           
           <!-- Standing Image Container -->
-          <div class="relative w-80 h-96 md:w-96 md:h-[500px] lg:w-[450px] lg:h-[600px] rounded-3xl overflow-hidden border-4 border-white dark:border-gray-700 shadow-2xl group-hover:scale-[1.02] transition-transform duration-500">
+          <div class="relative w-80 h-96 md:w-96 md:h-[500px] lg:w-[450px] lg:h-[600px] rounded-3xl overflow-hidden border-4 border-white dark:border-gray-700 shadow-2xl shadow-lg hover:scale-105 group-hover:scale-[1.02] transition-transform duration-500">
             <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=700&fit=crop" 
+              src="../assets/IMG_20260403_105856.jpg" 
               alt="Victor Mulondo Obama" 
               class="w-full h-full object-cover object-top"
             >
@@ -40,7 +40,7 @@ const isDark = inject('isDark');
       <!-- Right Side - Description -->
       <div class="text-center md:text-left">
         <p class="text-green-600 dark:text-green-400 font-medium tracking-wider uppercase mb-2 animate-pulse">Hello, There!</p>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-800 dark:text-white">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-800 dark:text-white font-bold">
           I'm <span class="text-green-500 dark:text-green-400">Victor Mulondo Obama</span>
         </h1>
         <h2 class="text-xl md:text-2xl font-medium text-gray-600 dark:text-gray-300 mb-6 animate-pulse">
@@ -66,7 +66,7 @@ const isDark = inject('isDark');
         </div>
 
         <!-- Stats -->
-        <div class="mt-12 flex gap-6 lg:gap-10 justify-center md:justify-start">
+        <div class="mt-12 flex gap-6 lg:gap-10 justify-center md:justify-start border-4 border-green-500 h-30 w-full items-center p-10 pl-25 rounded-tl-3xl rounded-br-3xl">
           <div class="text-center">
             <p class="text-3xl lg:text-4xl font-bold text-green-500 dark:text-green-400">2+</p>
             <p class="text-gray-500 dark:text-gray-400 text-sm">Years Experience</p>
@@ -82,6 +82,10 @@ const isDark = inject('isDark');
         </div>
       </div>
     </div>
+  </div>
+
+  <div>
+    <h1 class="dark:text-white text-center text-5xl font-bold text-green-500">About Me</h1>
   </div>
 </template>
 

@@ -7,13 +7,13 @@ const isDark = inject('isDark');
 const toggleTheme = inject('toggleTheme');
 </script>
 <template>
-    <div class="flex gap-4 items-center p-4 justify-between bg-transparent backdrop-blur-3xl text-black dark:text-white transition-colors duration-300">
+    <div class="flex gap-4 items-center p-4 justify-between bg-transparent backdrop-blur-3xl text-black dark:text-white transition-colors duration-300 dark:bg-transparent dark:border-b-2 ">
         <!-- logo -->
         <RouterLink to="/" class="group">
             <img :src="logo" alt="Victor Coder Logo" class="h-16 w-auto group-hover:scale-105 transition-all duration-300 group-hover:drop-shadow-[0_0_10px_rgba(34,197,94,0.5)]">
         </RouterLink>
 
-        <div class="gap-8 flex flex-row items-center text-black dark:text-white">
+        <div class="gap-8 flex flex-row items-center text-black dark:text-white ">
             <RouterLink class="relative cursor-pointer text-lg font-medium tracking-wide hover:tracking-wider hover:scale-105 hover:drop-shadow-[0_0_8px_rgba(34,197,94,0.4)] transition-all duration-300 group" to="/" v-slot="{ isActive }">
                 <span :class="isActive ? 'text-green-500 drop-shadow-[0_0_6px_rgba(34,197,94,0.5)]' : ''" class="font-['Poppins']">Home</span>
                 <span class="absolute -bottom-1 left-0 h-0.5 bg-black dark:bg-white transition-all duration-300 group-hover:w-full" :class="isActive ? 'w-full bg-green-400' : 'w-0'"></span>
