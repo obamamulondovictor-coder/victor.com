@@ -8,31 +8,31 @@ import Home from '@/pages/home.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
- {
-  path: '/',
-  name:'about',
-  component:about
- },
- {
-  path: '/service',
-  name:'service',
-  component:service
- },
- {
-  path: '/contact',
-  name:'contact',
-  component:contact
- },
- {
-  path: '/project',
-  name:'project',
-  component:Project
- },
- {
-  path: '/home',
-  name:'home',
-  component:Home
- }
+  {
+   path: '/',
+   name:'home',
+   component:Home
+  },
+  {
+   path: '/about',
+   name:'about',
+   component:about
+  },
+  {
+   path: '/service',
+   name:'service',
+   component:service
+  },
+  {
+   path: '/contact',
+   name:'contact',
+   component:contact
+  },
+  {
+   path: '/project',
+   name:'project',
+   component:Project
+  }
   ],
 })
 
