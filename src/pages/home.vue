@@ -1,8 +1,25 @@
 <script setup>
-import { inject } from 'vue';
+import { inject, ref, onMounted } from 'vue';
 import { RouterLink } from 'vue-router';
 
 const isDark = inject('isDark');
+
+const modal = ref(null);
+
+const openModal = () => {
+  if (modal.value) modal.value.classList.remove('hidden');
+};
+
+const closeModal = () => {
+  if (modal.value) modal.value.classList.add('hidden');
+};
+
+const schoolWeb = ()=>{
+  window.open('https://college-appec-web.vercel.app/','_blank')
+}
+const notify = () => {
+  alert('This Is The Current Project Your Running On, You Can Explore It To See What I Can Do Now!');
+}
 </script>
 <template>
   <div class="min-h-screen flex items-center justify-center px-4 py-8 md:py-12 pt-20 sm:pt-30">
@@ -319,25 +336,81 @@ const isDark = inject('isDark');
 
     <strong class="text-2xl font-sans dark:text-white text-gray-800 block mb-4">Some Project I Have Worked On:</strong>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6 max-w-6xl mx-auto">
-      <div class="personal border-2 border-green-500 dark:border-green-400 rounded-xl hover:shadow-xl hover:shadow-green-500/30 hover:scale-105 transition-all duration-300 p-4 bg-white dark:bg-gray-800">
+      <div
+        class="personal border-2 border-green-500 dark:border-green-400 rounded-xl hover:shadow-xl hover:shadow-green-500/30 hover:scale-105 transition-all duration-300 p-4 bg-white dark:bg-gray-800">
         <h3 class="text-lg font-bold dark:text-white text-gray-800 mb-2">Personal Portfolio</h3>
-        <p class="text-sm dark:text-gray-300 text-gray-600">Building my own portfolio website with Vue.js and Tailwind</p>
+        <p class="text-sm dark:text-gray-300 text-gray-600 mb-5">Building my own portfolio website with Vue.js and
+          Tailwind</p>
+        <button
+          class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg transition-colors duration-300 w-50" @click='notify'>
+          Visit
+        </button>
       </div>
-      <div class="appec border-2 border-green-500 dark:border-green-400 rounded-xl hover:shadow-xl hover:shadow-green-500/30 hover:scale-105 transition-all duration-300 p-4 bg-white dark:bg-gray-800">
+      <div
+        class="appec border-2 border-green-500 dark:border-green-400 rounded-xl hover:shadow-xl hover:shadow-green-500/30 hover:scale-105 transition-all duration-300 p-4 bg-white dark:bg-gray-800">
         <h3 class="text-lg font-bold dark:text-white text-gray-800 mb-2">School Website</h3>
-        <p class="text-sm dark:text-gray-300 text-gray-600">Team project - created a school website</p>
+        <p class="text-sm dark:text-gray-300 text-gray-600 mb-5">Team project - created a school website</p>
+        <button
+          class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg transition-colors duration-300 w-50" @click="schoolWeb">
+          Visit
+        </button>
       </div>
-      <div class="starting_workdone border-2 border-green-500 dark:border-green-400 rounded-xl hover:shadow-xl hover:shadow-green-500/30 hover:scale-105 transition-all duration-300 p-4 bg-white dark:bg-gray-800">
+      <div
+        class="starting_workdone border-2 border-green-500 dark:border-green-400 rounded-xl hover:shadow-xl hover:shadow-green-500/30 hover:scale-105 transition-all duration-300 p-4 bg-white dark:bg-gray-800">
         <h3 class="text-lg font-bold dark:text-white text-gray-800 mb-2">First Projects</h3>
-        <p class="text-sm dark:text-gray-300 text-gray-600">Started with HTML/CSS basics and simple layouts</p>
+        <p class="text-sm dark:text-gray-300 text-gray-600 mb-5">Started with HTML/CSS basics and simple layouts</p>
+        <button
+          class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg transition-colors duration-300 w-50"
+          onclick="window.open('https://obamamulondo.github.io/Obama-portfolio2.com/','_blank')">
+          Visit
+        </button>
       </div>
-      <div class="where_ border-2 border-green-500 dark:border-green-400 rounded-xl hover:shadow-xl hover:shadow-green-500/30 hover:scale-105 transition-all duration-300 p-4 bg-white dark:bg-gray-800">
+      <div
+        class="where_ border-2 border-green-500 dark:border-green-400 rounded-xl hover:shadow-xl hover:shadow-green-500/30 hover:scale-105 transition-all duration-300 p-4 bg-white dark:bg-gray-800 ">
         <h3 class="text-lg font-bold dark:text-white text-gray-800 mb-2">What I Can Do Now</h3>
-        <p class="text-sm dark:text-gray-300 text-gray-600">Full responsive websites, Vue.js apps, dark mode</p>
+        <p class="text-sm dark:text-gray-300 text-gray-600 mb-5">Full responsive websites, Vue.js apps, dark mode</p>
+        <button
+          class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg transition-colors duration-300 w-50"
+          @click="openModal">
+          Visit
+        </button>
       </div>
     </div>
 
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- card that appear when the what i can do now visit button is clicked -->
+   <div>
+      <div id="myModal" ref="modal" class="modal fixed inset-0 bg-transparent backdrop-blur-3xl bg-opacity-50 flex items-center justify-center hidden">
+          <div class="modal-content bg-white dark:bg-gray-800 rounded-lg p-6 w-11/12 md:w-1/2 lg:w-1/3 shadow-[18px_20px_7px_-4px_#969595]">
+            <span class="close absolute top-2 right-4 text-gray-500 cursor-pointer" @click="closeModal">&times;</span>
+            <h2 class="text-xl font-bold mb-4 dark:text-white text-gray-800">What I Can Do Now</h2>
+            <p class="text-sm dark:text-gray-300 text-gray-600 mb-5">I can create fully responsive websites using
+              Tailwind CSS, build interactive Vue.js applications, and implement dark mode for a better user experience.
+              My projects now include modern design principles and clean code.</p>
+            <button
+              class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg transition-colors duration-300 w-full"
+              @click="closeModal">
+              Close
+            </button>
+          </div>
+      </div>
+
+    </div>
 </template>
 
 <style scoped>
