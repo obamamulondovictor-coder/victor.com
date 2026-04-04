@@ -22,20 +22,20 @@ const notify = () => {
 }
 </script>
 <template>
-  <div class="min-h-screen flex items-center justify-center px-4 py-8 md:py-12 pt-20 sm:pt-30">
-    <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
+  <div class="min-h-screen flex flex-col justify-center px-3 py-6 md:py-12 pt-20 md:pt-30">
+    <div class="max-w-6xl w-full flex flex-col md:grid md:grid-cols-2 gap-4 md:gap-8 lg:gap-16 items-center">
 
       <!-- Left Side - Standing Picture -->
-      <div class="flex justify-center order-1 md:order-1">
+      <div class="flex justify-center order-1">
         <div class="relative group">
           <!-- Card Background Glow -->
           <div
-            class="absolute inset-0 bg-gradient-to-br from-green-400 via-white to-green-300 dark:from-green-800 dark:via-gray-800 dark:to-green-900 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-all duration-500">
+            class="absolute inset-0 bg-gradient-to-br from-green-400 via-white to-green-300 dark:from-green-800 dark:via-gray-800 dark:to-green-900 rounded-2xl md:rounded-3xl blur-xl md:blur-2xl opacity-60 group-hover:opacity-80 transition-all duration-500">
           </div>
 
           <!-- Standing Image Container -->
           <div
-            class="relative w-64 h-80 sm:w-72 sm:h-96 md:w-80 md:h-96 lg:w-96 lg:h-[500px] xl:w-[450px] xl:h-[600px] rounded-3xl overflow-hidden border-4 border-white dark:border-gray-700 shadow-2xl hover:scale-[1.02] group-hover:scale-[1.02] transition-transform duration-500">
+            class="relative w-48 h-56 sm:w-64 sm:h-80 md:w-64 md:h-80 lg:w-96 lg:h-[500px] xl:w-[450px] xl:h-[600px] rounded-2xl md:rounded-3xl overflow-hidden border-2 md:border-4 border-white dark:border-gray-700 shadow-xl md:shadow-2xl hover:scale-[1.02] group-hover:scale-[1.02] transition-transform duration-500">
             <img src="../assets/IMG_20260403_105856.jpg" alt="Victor Mulondo Obama"
               class="w-full h-full object-cover object-top">
             <!-- Overlay gradient -->
@@ -44,63 +44,61 @@ const notify = () => {
 
           <!-- Decorative Elements -->
           <div
-            class="absolute -bottom-6 -right-6 w-24 h-24 sm:w-32 sm:h-32 bg-green-400 dark:bg-green-500 rounded-full opacity-40 blur-2xl">
+            class="absolute -bottom-4 -right-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 bg-green-400 dark:bg-green-500 rounded-full opacity-40 blur-xl md:blur-2xl">
           </div>
           <div
-            class="absolute -top-6 -left-6 w-16 h-16 sm:w-20 sm:h-20 bg-green-300 dark:bg-green-600 rounded-full opacity-30 blur-xl">
+            class="absolute -top-4 -left-4 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-green-300 dark:bg-green-600 rounded-full opacity-30 blur-lg md:blur-xl">
           </div>
 
           <!-- Floating Badge - Bouncing -->
           <div
-            class="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-lg animate-bounce">
-            <p class="text-green-600 dark:text-green-400 font-semibold text-xs sm:text-sm">Fronted Developer</p>
+            class="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-3 rounded-full shadow-lg animate-bounce">
+            <p class="text-green-600 dark:text-green-400 font-semibold text-xs sm:text-sm">Frontend Developer</p>
           </div>
         </div>
       </div>
 
       <!-- Right Side - Description -->
-      <div class="text-center md:text-left order-2 md:order-2">
+      <div class="text-center md:text-left order-2 px-2">
         <p
-          class="text-green-600 dark:text-green-400 font-medium tracking-wider uppercase mb-2 animate-pulse text-sm sm:text-base">
+          class="text-green-600 dark:text-green-400 font-medium tracking-wider uppercase mb-1 md:mb-2 animate-pulse text-xs sm:text-sm">
           Hello, There!</p>
-        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-800 dark:text-white">
+        <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-bold mb-1 sm:mb-2 md:mb-4 text-gray-800 dark:text-white leading-tight">
           I'm <span class="text-green-500 dark:text-green-400">Victor Mulondo Obama</span>
         </h1>
-        <h2 class="text-lg sm:text-xl md:text-2xl font-medium text-gray-600 dark:text-gray-300 mb-6 animate-pulse">
-          Frontend Developer ,<span class="text-black dark:text-gray-300 font-bold">Still In Education</span>
+        <h2 class="text-xs sm:text-sm md:text-lg lg:text-xl font-medium text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 md:mb-6 animate-pulse">
+          Frontend Developer, <span class="text-black dark:text-gray-300 font-bold">Still In Education</span>
         </h2>
-        <p class="text-gray-600 dark:text-gray-400 text-base sm:text-lg leading-relaxed mb-8 max-w-lg mx-auto md:mx-0">
-          I craft beautiful, responsive, and user-friendly web experiences.
-          Passionate about creating elegant solutions that bring ideas to life
-          with modern technologies and clean code.
+        <p class="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-4 sm:mb-6 md:mb-8 max-w-md md:max-w-lg mx-auto md:mx-0">
+          I craft beautiful, responsive, and user-friendly web experiences. Passionate about creating elegant solutions that bring ideas to life with modern technologies and clean code.
         </p>
 
         <!-- Buttons -->
-        <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+        <div class="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 justify-center md:justify-start mb-4 sm:mb-6 md:mb-8">
           <RouterLink to="/project"
-            class="px-6 sm:px-8 py-3 sm:py-4 bg-green-500 hover:bg-green-600 text-white font-medium rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-400/50 dark:hover:shadow-green-500/30 text-sm sm:text-base">
+            class="px-4 sm:px-5 md:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 lg:py-4 bg-green-500 hover:bg-green-600 text-white font-medium rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-400/50 dark:hover:shadow-green-500/30 text-xs sm:text-sm md:text-base text-nowrap">
             View My Projects
           </RouterLink>
           <button
-            class="px-6 sm:px-8 py-3 sm:py-4 border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-white font-medium rounded-full transition-all duration-300 hover:scale-105 dark:border-green-400 dark:text-green-400 dark:hover:bg-green-400 dark:hover:text-gray-900 text-sm sm:text-base">
+            class="px-4 sm:px-5 md:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 lg:py-4 border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-white font-medium rounded-full transition-all duration-300 hover:scale-105 dark:border-green-400 dark:text-green-400 dark:hover:bg-green-400 dark:hover:text-gray-900 text-xs sm:text-sm md:text-base text-nowrap">
             Download Resume
           </button>
         </div>
 
         <!-- Stats -->
         <div
-          class="mt-10 sm:mt-12 flex flex-wrap gap-3 sm:gap-40 lg:gap-10 justify-center md:justify-start border-4 border-green-500 h-auto min-h-[120px] w-full items-center p-4 sm:p-6 md:p-10 rounded-tl-2xl md:rounded-tl-3xl rounded-br-2xl md:rounded-br-3xl">
-          <div class="text-center min-w-[70px]">
-            <p class="text-2xl sm:text-3xl lg:text-4xl font-bold text-green-500 dark:text-green-400">2+</p>
-            <p class="text-gray-500 dark:text-gray-400 text-xs sm:text-sm">Years Experience</p>
+          class="mt-4 sm:mt-6 md:mt-10 md:mt-12 flex flex-wrap gap-3 sm:gap-4 md:gap-6 lg:gap-10 justify-center md:justify-start border-2 md:border-4 border-green-500 h-auto min-h-[80px] sm:min-h-[100px] md:min-h-[120px] w-full items-center p-2 sm:p-3 md:p-5 lg:p-8 rounded-tl-lg sm:rounded-tl-xl md:rounded-tl-2xl lg:rounded-tl-3xl rounded-br-lg sm:rounded-br-xl md:rounded-br-2xl lg:rounded-br-3xl">
+          <div class="text-center min-w-[50px] sm:min-w-[60px] md:min-w-[70px]">
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold text-green-500 dark:text-green-400">2+</p>
+            <p class="text-[10px] sm:text-xs md:text-sm text-gray-500 dark:text-gray-400">Years Experience</p>
           </div>
-          <div class="text-center min-w-[70px]">
-            <p class="text-2xl sm:text-3xl lg:text-4xl font-bold text-green-500 dark:text-green-400">20+</p>
-            <p class="text-gray-500 dark:text-gray-400 text-xs sm:text-sm">Projects</p>
+          <div class="text-center min-w-[50px] sm:min-w-[60px] md:min-w-[70px]">
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold text-green-500 dark:text-green-400">20+</p>
+            <p class="text-[10px] sm:text-xs md:text-sm text-gray-500 dark:text-gray-400">Projects</p>
           </div>
-          <div class="text-center min-w-[70px]">
-            <p class="text-2xl sm:text-3xl lg:text-4xl font-bold text-green-500 dark:text-green-400">10+</p>
-            <p class="text-gray-500 dark:text-gray-400 text-xs sm:text-sm">Clients</p>
+          <div class="text-center min-w-[50px] sm:min-w-[60px] md:min-w-[70px]">
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold text-green-500 dark:text-green-400">10+</p>
+            <p class="text-[10px] sm:text-xs md:text-sm text-gray-500 dark:text-gray-400">Clients</p>
           </div>
         </div>
       </div>
@@ -378,6 +376,33 @@ const notify = () => {
     </div>
 
   </div>
+
+  <!-- footer section -->
+  <footer class="bg-white dark:bg-gray-800 border-t border-green-500 dark:border-green-400 mt-16 py-8">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-lg font-bold dark:text-white text-gray-800 mb-3">Victor Mulondo Obama</h3>
+        <p class="text-sm dark:text-gray-300 text-gray-600">Frontend Developer passionate about building beautiful, responsive web experiences.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-bold dark:text-white text-gray-800 mb-3">Quick Links</h3>
+        <ul class="space-y-2 text-sm dark:text-gray-300 text-gray-600">
+          <li><RouterLink to="/" class="hover:text-green-500 dark:hover:text-green-400">Home</RouterLink></li>
+          <li><RouterLink to="/about" class="hover:text-green-500 dark:hover:text-green-400">About</RouterLink></li>
+          <li><RouterLink to="/project" class="hover:text-green-500 dark:hover:text-green-400">Projects</RouterLink></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-lg font-bold dark:text-white text-gray-800 mb-3">Contact</h3>
+        <p class="text-sm dark:text-gray-300 text-gray-600">Email: <a href="mailto:obamamulondo@gmail.com" class="hover:text-green-500 dark:hover:text-green-400">obamamulondo@gmail.com</a></p>
+        <p class="text-sm dark:text-gray-300 text-gray-600 mt-2">Location: Rwanda 🇷🇼</p>
+        <p class="text-sm dark:text-gray-300 text-gray-600 mt-2">Phone: <a href="tel:+250787880064" class="hover:text-green-500 dark:hover:text-green-400">+250 787 880 064</a></p>
+      </div>
+    </div>
+    <div class="text-center mt-8 pt-4 border-t border-gray-200 dark:border-gray-700">
+      <p class="text-sm dark:text-gray-400 text-gray-500">&copy; 2024 Victor Mulondo Obama. All rights reserved.</p>
+    </div>
+  </footer>
 
 
 
